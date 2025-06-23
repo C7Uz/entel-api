@@ -70,7 +70,7 @@ class Inscriptions(models.Model):
     ruc = models.CharField(max_length=100, verbose_name='RUC', null=True, blank=True)
     email = models.EmailField(verbose_name='Email')
     response_infobip = models.TextField(null=True, blank=True, default=None, verbose_name='Respuesta Infobip')
-
+    publicidad = models.BooleanField(null=True, blank=True, default=None, verbose_name='Acepto el envío de publicidad')
     created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")
 
 

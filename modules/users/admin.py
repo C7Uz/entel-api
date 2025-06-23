@@ -23,7 +23,7 @@ class InscriptionResource(ModelResource):
     
     class Meta:
         model = Inscriptions
-        fields = ['event', 'fullname', 'cellphone', 'job', 'flag_business', 'company', 'ruc', 'email', 'created']
+        fields = ['event', 'fullname', 'cellphone', 'job', 'flag_business', 'company', 'ruc', 'email','publicidad', 'created']
 
  
 
@@ -85,7 +85,7 @@ class UserAdmin(BaseUserAdmin):
 
 @admin.register(Inscriptions)
 class InscriptionsAdmin(ModelAdmin, ImportExportModelAdmin):
-    list_display = ('id', 'event', 'fullname', 'created')
+    list_display = ('id', 'event', 'fullname','publicidad', 'created')
     list_filter = ('event__title', 'created', 'flag_business', 'response_infobip')
     search_fields = ('event__title', 'fullname', 'email', 'job', 'ruc')
     list_per_page = 50
