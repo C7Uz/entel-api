@@ -25,7 +25,7 @@ from openpyxl.utils import get_column_letter
 import io
 from datetime import datetime
 
-
+# Solo agregar este mixin antes de tu clase InscriptionsAdmin existente
 
 # Solo agregar este mixin antes de tu clase InscriptionsAdmin existente
 class ExcelExportMixin:
