@@ -202,6 +202,10 @@ class EventAdmin(BaseUnfoldAdmin, SortableAdminMixin):
             'fields': ('place', 'address', 'date'),
             'classes': ('wide',)
         }),
+        ('Cerrar Inscripciones', {
+            'fields': ('flag_endinscriptions',),  # Removed 'the_order' from here
+            'classes': ('collapse',)
+        }),
         ('Configuración Avanzada', {
             'fields': ('infobip_code',),  # Removed 'the_order' from here
             'classes': ('collapse',)

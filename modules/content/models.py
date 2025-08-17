@@ -111,6 +111,7 @@ class Event(SortableMixin):
     infobip_code = models.CharField(max_length=100, verbose_name='Código Infobip', null=True, blank=True, default=None)
     the_order = models.PositiveIntegerField(default=0, editable=False, db_index=True)
     
+    flag_endinscriptions = models.BooleanField(default=False, verbose_name='Inscripciones Abiertas', null=False, blank=False)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
